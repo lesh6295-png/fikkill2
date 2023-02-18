@@ -68,7 +68,7 @@ for(let i=1;i<=2; i++) {
             "accept": "*/*",
             "accept-language": "ru-RU,ru;q=0.9",
             "content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+            "sec-ch-ua": "\"Chromium\";v=\"110\", \"Not ABrand\";v=\"24\", \"Google Chrome\";v=\"110\"",
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": "\"Windows\"",
             "sec-fetch-dest": "empty",
