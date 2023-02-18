@@ -57,6 +57,7 @@ function rnd(min, max) {
 
 
 while (true) {
+    try{
 let fi = rnd(min,max);
 let part_id = rnd(min, max);
 for(let i=1;i<=2; i++) {
@@ -84,4 +85,6 @@ for(let i=1;i<=2; i++) {
     }); 
 }
 await sleep(50)
+    }
+    catch{continue;}
 }
