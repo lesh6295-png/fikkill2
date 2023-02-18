@@ -32,7 +32,7 @@ def login(user,passw,driver):
   
 #загружает в память джаваскрипт, который потом будет вставлен в вебдрайввер
 def loadjs():
-  file = open('script',mode='r',encoding="utf8")
+  file = open('script.js',mode='r',encoding="utf8")
   r = file.readlines()
   file.close()
   return r
