@@ -1,0 +1,30 @@
+name: Kostik Time To Suck
+on:
+  workflow_dispatch:
+    inputs:
+      account_login:
+        default: "niggadie"
+      account_password:
+        default: "kostikgandon"
+  push:
+
+jobs:
+  atk:
+    runs-on: windows-latest
+    steps:
+      - name: Clone
+        uses: actions/checkout@v3
+      - name: Install web driver
+        run: pip install undetected-chromedriver
+      - name: Install Chrome
+        shell: pwsh
+        run: |
+          $Path = $env:TEMP;
+          $Installer = “chrome_installer.exe”;
+          Invoke-WebRequest “http://dl.google.com/chrome/chrome_installer.exe" -OutFile $Path\$Installer;
+          Start-Process -FilePath $Path\$Installer -Args “/silent /install” -Verb RunAs -Wait;
+          Remove-Item $Path\$Installer
+      - name: Get Inputs
+        run: echo ${{ github.event.inputs.account_login }}
+      - name: Script
+        run: python githubserver/seleniumscr.py ${{inputs.account_login}} ${{inputs.account_password}}
