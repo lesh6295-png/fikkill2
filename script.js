@@ -84,7 +84,7 @@ for(let i=1;i<=2; i++) {
         "credentials": "include"
     }); 
 }
-await sleep(50)
+await sleep(400)
     }
     catch{continue;}
 }
